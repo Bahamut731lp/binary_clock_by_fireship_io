@@ -1,0 +1,104 @@
+:root {
+    --dark_gray: rgba(29,29,29);
+    --blue1: rgb(34,151,245);
+    --blue2: rgb(5,170,245);
+    --green1: rgb(77,175,80);
+    --green2: rgb(140,195,75);
+    --red1: rgb(235,30,100);
+    --red2: rgb(130,40,70);
+}
+
+.hidden {
+    display: none!important;
+}
+
+body {
+    margin: 0;
+    background: rgb(47,46,48);
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.column, .blocks {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.block {
+    background: var(--dark_gray);
+    width: 5vw;
+    height: 7vw;
+    margin: 5px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: var(--dark_gray);
+    transition: 0.1s;
+}
+
+.block.active {
+    color: rgba(0,0,0,0.30);
+}
+
+.title {
+    color: var(--dark_gray);
+    margin: auto;
+    flex: 1;
+}
+
+.title, .decimal {
+    font-size: 5vw;
+    margin: 0;
+}
+
+.hours1 .block.active { background: var(--blue1); }
+
+.hours1 .decimal,
+.hours1 .binary {
+    color: var(--blue1);
+}
+
+.hours2 .block.active { background: var(--blue2); }
+.hours2 .decimal,
+.hours2 .binary {
+    color: var(--blue2);
+}
+
+.minutes1 .block.active { background: var(--green1); }
+
+.minutes1 .decimal,
+.minutes1 .binary {
+    color: var(--green1);
+}
+
+.minutes2 .block.active { background: var(--green2); }
+
+.minutes2 .decimal,
+.minutes2 .binary {
+    color: var(--green2);
+}
+
+.seconds1 .block.active { background: var(--red1); }
+.seconds1 .decimal,
+.seconds1 .binary {
+    color: var(--red1);
+}
+
+.seconds2 .block.active { background: var(--red2); }
+
+.seconds2 .decimal,
+.seconds2 .binary {
+    color: var(--red2);
+}
